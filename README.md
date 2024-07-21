@@ -7,23 +7,37 @@ This project is a comprehensive fraud detection system that identifies fraudulen
 ## Features
 
 -**Ad Fraud Detection:** Identifies fraudulent ad transactions.
+
 -**Referral and Promo Abuse Detection:** Detects misuse of referral codes and promotional offers.
+
 -**Fake Email Detection:** Flags potentially fraudulent email addresses.
+
 -**SMS Fraud Detection:**  Analyzes SMS content for signs of fraud.
+
 -**Fake URL Detection:** Identifies potentially fraudulent URLs.
+
 -**Gift Card Scam Detection:**  Flags suspicious gift card transactions.
+
 -**Charity Fund Scam Detection:**  Detects fraudulent charity fund transactions.
+
 -**Fake OTP Scam Detection:**  Identifies fraudulent OTP activities.
+
 -**Fake Commercial Sites Detection:**  Flags suspicious commercial websites.
+
 -**Credit Card Fraud Detection:**  Detects fraudulent credit card transactions.
 
 ## Technologies Used
 
 -**Python:**  For machine learning and data processing.
+
 -**Flask:**  Web framework for creating the web application.
+
 -**MySQL:**  Database for storing transaction data.
+
 -**Scikit-Learn:**  For building and training machine learning models.
+
 -**Joblib:**  For saving and loading trained models.
+
 -**HTML/CSS:**  For creating user interfaces.
 
 ## Dataset 
@@ -53,31 +67,106 @@ Create the database and tables. Connect to MySQL and execute the SQL commands.
 
 ```sql
 Copy code
-CREATE DATABASE fraud_detection;
+CREATE DATABASE kuchbhi;
 
-USE fraud_detection;
+USE kuchbhi;
 
-CREATE TABLE ad_transactions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    ad_platform VARCHAR(50),
-    clicks INT,
-    impressions INT,
-    ip_address VARCHAR(50),
-    country VARCHAR(50),
-    browser VARCHAR(50),
-    result VARCHAR(50),
-    submission_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+CREATE TABLE `ad_transactions` (
+  `id` int(11) NOT NULL,
+  `ad_platform` varchar(50) DEFAULT NULL,
+  `clicks` int(11) DEFAULT NULL,
+  `impressions` int(11) DEFAULT NULL,
+  `ip_address` varchar(50) DEFAULT NULL,
+  `country` varchar(50) DEFAULT NULL,
+  `browser` varchar(50) DEFAULT NULL,
+  `result` varchar(50) DEFAULT NULL,
+  `submission_time` timestamp NOT NULL DEFAULT current_timestamp()
 );
 
-CREATE TABLE referral_promo_transactions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    referral_code VARCHAR(50),
-    promo_code VARCHAR(50),
-    num_referrals INT,
-    total_spent DECIMAL(10, 2),
-    result VARCHAR(50),
-    submission_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE `charity_fund_transactions` (
+  `id` int(11) NOT NULL,
+  `amount` decimal(10,2) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `charity_id` varchar(100) DEFAULT NULL,
+  `location` varchar(100) DEFAULT NULL,
+  `donation_type` varchar(100) DEFAULT NULL,
+  `result` varchar(50) DEFAULT NULL,
+  `submission_time` timestamp NOT NULL DEFAULT current_timestamp()
 );
+
+CREATE TABLE `credit_card_transactions` (
+  `id` int(11) NOT NULL,
+  `amount` decimal(10,2) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `merchant_id` varchar(100) DEFAULT NULL,
+  `location` varchar(100) DEFAULT NULL,
+  `result` varchar(50) DEFAULT NULL,
+  `submission_time` timestamp NOT NULL DEFAULT current_timestamp()
+);
+CREATE TABLE `email_submissions` (
+  `id` int(11) NOT NULL,
+  `emailcontent` varchar(255) DEFAULT NULL,
+  `result` varchar(255) DEFAULT NULL,
+  `submission_time` timestamp NOT NULL DEFAULT current_timestamp()
+);
+
+CREATE TABLE `gift_card_transactions` (
+  `id` int(11) NOT NULL,
+  `amount` decimal(10,2) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `merchant_id` varchar(100) DEFAULT NULL,
+  `location` varchar(100) DEFAULT NULL,
+  `gift_card_type` varchar(100) DEFAULT NULL,
+  `result` varchar(50) DEFAULT NULL,
+  `submission_time` timestamp NOT NULL DEFAULT current_timestamp()
+);
+
+
+
+CREATE TABLE `insurance_claims` (
+  `id` int(11) NOT NULL,
+  `claimant_name` varchar(100) DEFAULT NULL,
+  `claim_amount` decimal(10,2) DEFAULT NULL,
+  `claim_description` text DEFAULT NULL,
+  `claim_date` date DEFAULT NULL,
+  `result` varchar(50) DEFAULT NULL,
+  `submission_time` timestamp NOT NULL DEFAULT current_timestamp()
+);
+
+CREATE TABLE `otp_transactions` (
+  `id` int(11) NOT NULL,
+  `amount` decimal(10,2) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `phone_number` varchar(100) DEFAULT NULL,
+  `location` varchar(100) DEFAULT NULL,
+  `otp_type` varchar(100) DEFAULT NULL,
+  `result` varchar(50) DEFAULT NULL,
+  `submission_time` timestamp NOT NULL DEFAULT current_timestamp()
+);
+
+CREATE TABLE `referral_promo_transactions` (
+  `id` int(11) NOT NULL,
+  `referral_code` varchar(50) DEFAULT NULL,
+  `promo_code` varchar(50) DEFAULT NULL,
+  `num_referrals` int(11) DEFAULT NULL,
+  `total_spent` decimal(10,2) DEFAULT NULL,
+  `result` varchar(50) DEFAULT NULL,
+  `submission_time` timestamp NOT NULL DEFAULT current_timestamp()
+);
+
+
+CREATE TABLE `sms_submissions` (
+  `id` int(11) NOT NULL,
+  `phone_number` varchar(50) NOT NULL,
+  `sms_message` text NOT NULL,
+  `result` varchar(50) NOT NULL,
+  `submission_time` timestamp NOT NULL DEFAULT current_timestamp()
+);
+
+
+
+
 ```
 
 ### 4. **Train the Models**
@@ -105,12 +194,15 @@ Open your browser and navigate to http://localhost:5000 to access the fraud dete
 The web application includes user authentication with login and sign-in pages. Ensure you have a user management system in place, such as:
 
 -**User Registration:** Allows new users to sign up.
+
 -**User Login:** Authenticates existing users.
+
 -**Session Management:** Keeps users logged in during their session.
 
 ## User Authentication Setup
 
 -**Update Flask Configuration:** Ensure the Flask app is configured for user authentication.
+
 -**Database for Users:** Create a table to store user credentials.
 
 ## Example SQL for User Table:
