@@ -42,7 +42,15 @@ This project is a comprehensive fraud detection system that identifies fraudulen
 
 ## Dataset 
 
-The dataset used for training the models was collected from YouData.ai. It includes various features relevant to detecting fraud in different domains.
+The dataset used for training the models was collected from [YouData.ai](https://youdata.ai) It includes various features relevant to detecting fraud in different domains.
+Following are some links of dataset:
+
+[1](https://www.youdata.ai/m/datasets/662ddfb3ec1654669685710d)
+[2](https://www.youdata.ai/m/datasets/64ddbbfbf4420f00091fb575)
+[3](https://www.youdata.ai/m/datasets/661d142b4c40e249a48066ee)
+[4](https://www.youdata.ai/m/datasets/662de3d4ec16546696857c2b)
+[5](https://www.youdata.ai/m/datasets/662de2ee2edd02c265857a38)
+[6](https://www.youdata.ai/m/datasets/661d15d9279aa8ef92326b3c)
 
 ## Setup
 
@@ -64,9 +72,10 @@ pip install -r requirements.txt
 
 ### 3. **Database Setup**
 Create the database and tables. Connect to MySQL and execute the SQL commands.
+Copy code
 
 ```sql
-Copy code
+
 CREATE DATABASE kuchbhi;
 
 USE kuchbhi;
