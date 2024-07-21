@@ -37,21 +37,21 @@ The dataset used for training the models was collected from YouData.ai. It inclu
 ```bash
 git clone https://github.com/yourusername/fraud-detection-system.git
 cd fraud-detection-system
-
+```
 
 ### 2. **Install Dependencies**
-Create a virtual environment and install the required packages.
+Create a virtual environment and install the required packag
 
 ```bash
-
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
 
-3. Database Setup
+### 3. **Database Setup**
 Create the database and tables. Connect to MySQL and execute the SQL commands.
 
-sql
+```sql
 Copy code
 CREATE DATABASE fraud_detection;
 
@@ -78,34 +78,44 @@ CREATE TABLE referral_promo_transactions (
     result VARCHAR(50),
     submission_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-4. Train the Models
+```
+
+### 4. **Train the Models**
 Run the training scripts to create and save machine learning models.
 
-bash
-Copy code
+```bash
+
 python train_ad_fraud_model.py
 python train_referral_promo_model.py
-5. Run the Flask Application
+```
+
+### 5. **Run the Flask Application**
 Start the Flask web server.
 
-bash
-Copy code
+```bash
 python app.py
-6. Access the Web Application
+```
+
+### 6. **Access the Web Application**
+
 Open your browser and navigate to http://localhost:5000 to access the fraud detection system.
 
-User Authentication
+## User Authentication
+
 The web application includes user authentication with login and sign-in pages. Ensure you have a user management system in place, such as:
 
-User Registration: Allows new users to sign up.
-User Login: Authenticates existing users.
-Session Management: Keeps users logged in during their session.
-User Authentication Setup
-Update Flask Configuration: Ensure the Flask app is configured for user authentication.
-Database for Users: Create a table to store user credentials.
-Example SQL for User Table:
+-**User Registration:** Allows new users to sign up.
+-**User Login:** Authenticates existing users.
+-**Session Management:** Keeps users logged in during their session.
 
-sql
+## User Authentication Setup
+
+-**Update Flask Configuration:** Ensure the Flask app is configured for user authentication.
+-**Database for Users:** Create a table to store user credentials.
+
+## Example SQL for User Table:
+
+```sql
 Copy code
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -114,14 +124,20 @@ CREATE TABLE users (
     email VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
+
 Integrate Authentication: Use libraries such as Flask-Login for session management.
-Contributing
+
+## Contributing 
+
 Feel free to contribute to this project by submitting pull requests or reporting issues.
 
-License
+## License
+
 This project is licensed under the MIT License.
 
-Contact
-For any questions or inquiries, please contact [your email address].
+## Contact
+
+For any questions or inquiries, please contact 121deepak2104@sjcem.edu.in.
 
 
