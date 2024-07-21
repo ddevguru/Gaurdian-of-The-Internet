@@ -75,7 +75,15 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. **Database Setup**
+
+### 3. **Install Libraries**
+You can install all the dependencies listed in requirements.txt using the following command:
+
+```sh
+pip install -r requirements.txt
+```
+
+### 4. **Database Setup**
 Create the database and tables. Connect to MySQL and execute the SQL commands.
 Copy code
 
@@ -183,24 +191,34 @@ CREATE TABLE `sms_submissions` (
 
 ```
 
-### 4. **Train the Models**
+### 5. **Train the Models**
 Run the training scripts to create and save machine learning models.
 
 ```bash
 
 python train_ad_fraud_model.py
-python train_referral_promo_model.py
 python train_charity_fund_model.py
+python train_credit_card_model.py
+python train_email_model.py
+python train_gift_card_model.py
+python train_insurance_model.py
+python train_model.py
+python train_otp_fraud_model.py
+python train_referral_promo_model.py
+python train_sms_model.py
+python train_url_fraud_model.py
+python fraud_detection.py
+
 ```
 
-### 5. **Run the Flask Application**
+### 6. **Run the Flask Application**
 Start the Flask web server.
 
 ```bash
 python app.py
 ```
 
-### 6. **Access the Web Application**
+### 7. **Access the Web Application**
 
 Open your browser and navigate to http://localhost:5000 to access the fraud detection system.
 
