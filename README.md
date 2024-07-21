@@ -7,16 +7,26 @@ This project is a comprehensive fraud detection system that identifies fraudulen
 # Features
 
 Ad Fraud Detection: Identifies fraudulent ad transactions.
+
 Referral and Promo Abuse Detection: Detects misuse of referral codes and promotional offers.
+
 Fake Email Detection: Flags potentially fraudulent email addresses.
+
 SMS Fraud Detection: Analyzes SMS content for signs of fraud.
+
 Fake URL Detection: Identifies potentially fraudulent URLs.
+
 Gift Card Scam Detection: Flags suspicious gift card transactions.
+
 Charity Fund Scam Detection: Detects fraudulent charity fund transactions.
+
 Fake OTP Scam Detection: Identifies fraudulent OTP activities.
+
 Fake Commercial Sites Detection: Flags suspicious commercial websites.
+
 Credit Card Fraud Detection: Detects fraudulent credit card transactions.
-Technologies Used
+
+# Technologies Used
 Python: For machine learning and data processing.
 Flask: Web framework for creating the web application.
 MySQL: Database for storing transaction data.
