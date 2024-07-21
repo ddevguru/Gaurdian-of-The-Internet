@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Charity Fund Transaction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Charity Fund Transaction Result</h1>
+    <div class="result">
+        <h2>Result</h2>
+        <p>{{ result }}</p>
+    </div>
+    
+    <h2>All Transactions</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Amount</th>
+            <th>User ID</th>
+            <th>Charity ID</th>
+            <th>Location</th>
+            <th>Donation Type</th>
+            <th>Result</th>
+            <th>Submission Time</th>
+        </tr>
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction.id }}</td>
+            <td>{{ transaction.amount }}</td>
+            <td>{{ transaction.user_id }}</td>
+            <td>{{ transaction.charity_id }}</td>
+            <td>{{ transaction.location }}</td>
+            <td>{{ transaction.donation_type }}</td>
+            <td>{{ transaction.result }}</td>
+            <td>{{ transaction.submission_time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <a href="/">Home</a>
+</body>
+</html>

@@ -1,0 +1,11 @@
+amount,user_id,merchant_id,location,gift_card_type,is_fraud
+100,1,amazon,New York,Amazon,0
+200,2,walmart,California,Walmart,1
+50,3,target,Texas,Target,0
+300,4,bestbuy,Florida,Best Buy,1
+25,5,amazon,New York,Amazon,0
+150,6,walmart,California,Walmart,1
+75,7,target,Texas,Target,0
+400,8,bestbuy,Florida,Best Buy,1
+100,9,amazon,New York,Amazon,0
+250,10,walmart,California,Walmart,1

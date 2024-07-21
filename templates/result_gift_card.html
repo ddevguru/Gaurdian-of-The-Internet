@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/result.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+	
+</head>
+<body>
+	<div class="video-background-fixed">
+		<video autoplay muted loop id="bg-video">
+			<source src="{{url_for('static', filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+	</div>
+	<div class="content">
+		<header>
+            <div class="logo">
+				
+				<a href="/index">GUARDIANS OF THE INTERNET</a>
+				<div class="menu-toggle" id="menu-toggle">&#9776;</div>
+			</div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <div><a href="#">Resources</a></div>
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+		<div class="container">
+			<h1>Detection Result</h1>
+			<div class="results-container">
+				<div class="result-left">
+					<p>RESULT</p>
+				</div>
+				<div class="result-right">
+                    <p>{{ result }}</p>
+				</div>
+			</div>
+			<p class="table-title">All Submisions</p>
+			<div class="submission-table">
+				<table>
+					<thead>
+						<tr>
+                            <th>ID</th>
+                            <th>Amount</th>
+                            <th>User ID</th>
+                            <th>Merchant ID</th>
+                            <th>Location</th>
+                            <th>Gift Card Type</th>
+                            <th>Result</th>
+                            <th>Submission Time</th>
+                        </tr>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Example rows -->
+                        {% for transaction in transactions %}
+                        <tr>
+                            <td>{{ transaction.id }}</td>
+                            <td>{{ transaction.amount }}</td>
+                            <td>{{ transaction.user_id }}</td>
+                            <td>{{ transaction.merchant_id }}</td>
+                            <td>{{ transaction.location }}</td>
+                            <td>{{ transaction.gift_card_type }}</td>
+                            <td>{{ transaction.result }}</td>
+                            <td>{{ transaction.submission_time }}</td>
+                        </tr>
+                        {% endfor %}
+					</tbody>
+				</table>
+			</div>
+			<div class="buttons-container">
+				<button onclick="submitAnotherEmail()">Submit Another Email</button>
+				<button ><a style="text-decoration:none;" href="/home">Home</a></button>
+			</div>
+		</div>
+	</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script>
+</body>
+</html>

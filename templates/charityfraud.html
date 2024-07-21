@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background-fixed">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+                        Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="split-container">
+            <div class="column left">
+                <!-- Content for the left column goes here -->
+                <h1 class="title">Charity Fraud</h1>
+                <p class="description">
+                    Charity fraud involves deceptive practices where fraudsters exploit individuals' goodwill by posing as legitimate charitable organizations or creating fake charities. The primary goal of these scams is to benefit the fraudsters financially, often at the significant expense of the intended beneficiaries and donors. This type of fraud can be highly sophisticated and difficult to detect, making it crucial for donors to understand its mechanisms, common tactics, and warning signs.
+                </p>
+
+                <h1 class="title">Common Forms of Charity Fraud</h1>
+                <h2 class="title-2">1. Fake Charities</h2>
+                <p class="description">Fake charities are organizations that do not exist or are set up to look like legitimate charities. Fraudsters use these fake entities to solicit donations, often using emotional appeals and urgent language to encourage immediate contributions. Donors who give to these fake charities typically see their money go directly into the fraudsters' pockets.</p>
+                
+                <h2 class="title-2">2. Impersonation of Real Charities</h2>
+                <p class="description">In this form of charity fraud, fraudsters impersonate well-known, reputable charities. They create websites, emails, or social media profiles that closely mimic those of real organizations. By doing so, they deceive donors into thinking they are contributing to a legitimate cause, when in fact, their donations are being redirected to the fraudsters.</p>
+                
+                <h2 class="title-2">3. Emotional Appeals</h2>
+                <p class="description">Fraudsters often exploit natural disasters, pandemics, or personal tragedies to create emotional appeals that encourage people to donate. These scams can be particularly effective during times of crisis when individuals are more likely to give generously to support those in need.</p>
+                
+                <h2 class="title-2">4. Telemarketing Scams</h2>
+                <p class="description">Telemarketing scams involve fraudsters calling potential donors and soliciting donations over the phone. They may claim to represent well-known charities or create entirely fictitious organizations. These calls often use high-pressure tactics and emotional stories to secure donations immediately.</p>
+                
+                <div class="warning-signs">
+                    <h2 class="title-2">Warning Signs and Prevention</h2>
+                    <ul>
+                        <li class="description">Unsolicited Donation Requests: Be cautious of unsolicited requests for donations, especially if they come via email, phone calls, or social media.</li>
+                        <li class="description">High-Pressure Tactics: Scammers often use high-pressure tactics to create a sense of urgency. Legitimate charities will allow you time to research and consider your donation.</li>
+                        <li class="description">Lack of Detailed Information: Legitimate charities provide detailed information about their mission, programs, and how donations are used. Be wary of organizations that cannot provide this information.</li>
+                        <li class="description">Unverified Contact Information: Verify the charity's contact information and ensure it matches what is listed on their official website. Be cautious of charities that use personal email addresses or P.O. boxes.</li>
+                        <li class="description">Unsecure Payment Methods: Legitimate charities offer secure payment methods. Be cautious if you are asked to donate via wire transfer, cash, or gift cards.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Case Studies and Impact</h2>
+                    <p class="description">One notable case of charity fraud involved a scam during the aftermath of a major natural disaster. Fraudsters set up fake websites and social media profiles posing as reputable disaster relief organizations. They solicited donations from well-meaning individuals looking to help the victims. The scam diverted millions of dollars from the intended relief efforts, leaving both the victims and the donors at a loss.</p>
+                    <p class="description">The impact of charity fraud extends beyond financial losses. Victims often experience significant emotional and psychological distress, including feelings of betrayal and guilt for not recognizing the scam. Additionally, charity fraud undermines trust in legitimate charitable organizations, making it harder for genuine causes to receive the support they need. The broader impact includes a general erosion of public trust in charitable giving and increased skepticism towards donation requests.</p>
+                    <p class="description">Understanding and recognizing the warning signs of charity fraud is essential for protecting oneself from these schemes. By staying vigilant and taking precautionary measures, donors can ensure their contributions reach legitimate organizations and support the intended causes.</p>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="email-details">
+                    <form method="POST" action="{{url_for('submit_charity_fund')}}">
+                        <label for="email">Amount:</label>
+                        <input type="text" id="email" name="amount" required>
+                
+                        <label for="subject">User Id:</label>
+                        <input type="text" id="subject" name="user_id" required>
+
+                        <label for="subject">Charity Id:</label>
+                        <input type="text" id="subject" name="charity_id" required>
+
+                        <label for="subject">Location:</label>
+                        <input type="text" id="subject" name="location" required>
+
+                        <label for="subject">Donation Type:</label>
+                        <input type="text" id="subject" name="donation_type" required>
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script>
+</body>
+</html>

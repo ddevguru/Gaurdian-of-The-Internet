@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+.content {
+	align-items: center;
+}
+
+.container {
+	position: relative;
+	top: 40px;
+	width: 80%;
+    background-color: rgba(65, 65, 65, 0.4);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+	margin-bottom: 20px;
+	font-size: 50px;
+}
+
+.results-container p{
+	text-align: center;
+}
+
+.table-title {
+	font-size: 30px;
+	font-weight: 500;
+	width: 100%;
+	text-align: center;
+}
+
+.results-container {
+	height: 150px;
+    display: flex;
+	font-size: 24px;
+	font-weight: 700;
+    justify-content: space-between;
+	align-items: center;
+    background-color: #333;
+    border-radius: 10px;
+	margin: 0 auto 20px; /* Center the results-container horizontally */
+    max-width: 50%; /* Set a fixed width or max-width for centering */
+}
+
+.result-left {
+	height: 100%;
+	color: black;
+    background-color: #29dbbd;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.result-right {
+	height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    flex: 1;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.submission-table {
+    max-height: 200px; /* Set the max height of the table container */
+    overflow-y: auto; /* Enable vertical scrolling */
+	position: relative;
+}
+
+.submission-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.submission-table th,
+.submission-table td {
+	padding: 10px;
+    border: 2px solid #29dbbd;
+    text-align: left;
+	text-align: center;
+}
+
+.submission-table th {
+    background-color: #d66e6e;
+	text-align: center;
+	position: sticky; /* Make the header sticky */
+    top: 0; /* Position it at the top */
+    z-index: 1; /* Ensure it stays on top of table content */
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+	margin-top: 20px;
+}
+
+.buttons-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #29dbbd;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buttons-container button:hover {
+    background-color: #24a590;
+}
+
+@media (max-width: 768px) {
+
+	.container{
+		position: relative;
+		top: 30px;
+		width: 95%;
+	}
+
+	h1 {
+		font-size: 24px;
+	}
+
+	.results-container {
+		height: 100px;
+		font-size: 14px;
+		max-width: 70%;
+	}
+
+	.table-title {
+		font-size: 16px;
+	}
+
+	.result-left, 
+	.result-right {
+		padding: 10px;
+	}
+	
+	.submission-table th,
+	.submission-table td {
+		font-size: 14px;
+		padding: 5px;
+	}
+
+	.submission-table {
+		max-height: 300px;
+	}
+
+	.buttons-container button {
+		padding: 5px 10px;
+		font-size: 12px;
+	}
+}

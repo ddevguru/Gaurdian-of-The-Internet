@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+	
+</head>
+<body>
+	<div class="video-background-fixed">
+		<video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">			Your browser does not support HTML5 video.
+		</video>
+	</div>
+	<div class="content">
+		<header>
+            <div class="logo">
+				
+				<a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+				<div class="menu-toggle" id="menu-toggle">&#9776;</div>
+			</div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+		<div class="split-container">
+			<div class="column left">
+				<!-- Content for the left column goes here -->
+				<h1 class="title">Investment Fraud</h1>
+				<!-- Add more content here to make it scrollable -->
+				<p class="description">
+					Investment fraud is a broad term that encompasses various schemes designed to deceive investors into making financial commitments based on false, misleading, or fraudulent information. The primary goal of these schemes is to benefit the fraudsters financially, often at the significant expense of the victims. This type of fraud can be highly sophisticated and difficult to detect, making it crucial for investors to understand its mechanisms, common tactics, and warning signs.
+				</p>
+
+				<h1 class="title">Types of Investment Fraud</h1>
+        <h2 class="title-2">1. Ponzi Schemes</h2>
+        <p class="description">Ponzi schemes are one of the most infamous types of investment fraud. Named after Charles Ponzi, who became notorious for using this technique in the early 20th century, these schemes promise high returns with little or no risk. In reality, the returns paid to earlier investors come from the capital of new investors. This structure requires a constant influx of new investments to maintain the illusion of profitability. Once new investments dwindle, the scheme collapses, leaving most investors with significant losses.</p>
+        
+        <h2 class="title-2">2. Pyramid Schemes</h2>
+        <p class="description">Similar to Ponzi schemes, pyramid schemes involve recruiting new participants to provide returns to earlier investors. However, pyramid schemes emphasize recruitment over investments. Participants are promised profits for bringing in new members rather than from the success of an underlying business. These schemes are unsustainable and often collapse when recruitment slows, leading to substantial financial losses for those at the bottom of the pyramid.</p>
+        
+        <h2 class="title-2">3. Pump and Dump Schemes</h2>
+        <p class="description">Pump and dump schemes involve artificially inflating the price of a stock through false or misleading positive statements. Fraudsters buy large amounts of a low-value stock (often penny stocks), then spread false information to drive up the stock's price. Once the price has been inflated ("pumped"), the fraudsters sell off their shares at a profit ("dump"), causing the stock's price to plummet. Unsuspecting investors who bought the stock at the inflated price suffer significant losses.</p>
+        
+        <h2 class="title-2">4. Affinity Fraud</h2>
+        <p class="description">Affinity fraud targets members of identifiable groups such as religious or ethnic communities, professional organizations, or social clubs. Fraudsters, who may be members of the group or claim to be, exploit the trust within the group to convince members to invest in fraudulent schemes. Because of the inherent trust, victims may be less likely to scrutinize the investment and more likely to invest substantial amounts.</p>
+        
+        <div class="warning-signs">
+            <h2 class="title-2">Warning Signs and Prevention</h2>
+            <ul>
+                <li class="description">Guaranteed High Returns with Low Risk: Be wary of investments that promise unusually high returns with little or no risk. Every investment carries some level of risk, and high returns typically come with higher risks.</li>
+                <li class="description">Unregistered Investments: Check if the investment and the seller are registered with the appropriate regulatory bodies, such as the Securities and Exchange Commission (SEC) in the United States. Unregistered investments are often a sign of fraud.</li>
+                <li class="description">Complex Strategies: Fraudsters often use complex or secretive strategies to explain their investment approach. If you cannot understand how an investment works, it is wise to avoid it.</li>
+                <li class="description">Pressure to Reinvest: Be cautious of high-pressure sales tactics that encourage you to reinvest returns or recruit new investors quickly.</li>
+                <li class="description">Unsolicited Offers: Be skeptical of unsolicited investment offers, especially those received via email, social media, or phone calls.</li>
+            </ul>
+        </div>
+        
+        <div class="case-studies">
+            <h2 class="title-2">Case Studies and Impact</h2>
+            <p class="description">One of the most notable cases of investment fraud is the Bernie Madoff Ponzi scheme, which defrauded thousands of investors out of billions of dollars over several decades. Madoff's scheme collapsed during the financial crisis of 2008, revealing the extensive fraud and leading to his arrest and conviction.</p>
+            <p class="description">The impact of investment fraud extends beyond financial losses. Victims often experience significant emotional and psychological distress, including shame, guilt, and depression. The ripple effect of these schemes can also harm the broader economy, as investor confidence in financial markets and institutions is eroded.</p>
+        </div>
+				
+			</div>
+			<div class="column right">
+				<div class="email-details">
+					<form method="POST" action="{{url_for('investment')}}">
+						<label for="email">Data</label>
+						<input type="text" id="data" name="data" required>
+				
+						
+                        <input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script>
+</body>
+</html>

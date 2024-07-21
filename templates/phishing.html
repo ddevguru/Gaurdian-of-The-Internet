@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background-fixed">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="split-container">
+            <div class="column left">
+                <!-- Content for the left column goes here -->
+                <h1 class="title">Phishing</h1>
+                <!-- Add more content here to make it scrollable -->
+                <p class="description">
+                    Phishing is a deceptive practice where fraudsters send emails that appear to be from legitimate sources to trick recipients into providing sensitive information or taking harmful actions. These emails often exploit the trust and familiarity associated with the purported sender to deceive individuals, leading to significant financial and personal losses. Understanding the methods, warning signs, and preventive measures associated with email fraud is crucial for safeguarding against these attacks.
+                </p>
+
+                <h1 class="title">Common Methods in Phishing</h1>
+                <h2 class="title-2">1. Phishing Emails</h2>
+                <p class="description">Phishing emails are the most prevalent form of email fraud. These emails mimic the appearance and tone of messages from trusted entities, such as banks, online services, or employers. They typically ask recipients to verify their account details, update personal information, or confirm transactions. The emails often include links to fake websites that capture the entered information for fraudulent use.</p>
+                
+                <h2 class="title-2">2. Spear Phishing</h2>
+                <p class="description">Spear phishing targets specific individuals or organizations with tailored messages. These emails use personal details gathered from various sources to appear more legitimate and convincing. The fraudsters might reference recent transactions, name acquaintances, or include other personalized content to lower the recipient’s guard.</p>
+                
+                <h2 class="title-2">3. Business Email Compromise (BEC)</h2>
+                <p class="description">BEC involves fraudsters impersonating high-level executives or trusted business contacts to request wire transfers or sensitive information. These emails often create a sense of urgency or confidentiality to prompt immediate action without verification. BEC attacks can result in significant financial losses for businesses.</p>
+                
+                <h2 class="title-2">4. Malware Attachments</h2>
+                <p class="description">Some fraudulent emails contain attachments that, when opened, install malware on the recipient’s device. This malware can steal personal information, encrypt files for ransom (ransomware), or grant the fraudsters remote control over the device. Common attachment types used in these scams include PDFs, Word documents, and ZIP files.</p>
+                
+                <h2 class="title-2">5. Fake Invoices and Payment Requests</h2>
+                <p class="description">Fraudsters often send fake invoices or payment requests that appear to come from legitimate vendors or business partners. These emails aim to trick the recipient into making payments to fraudulent accounts. The emails may use official-looking formats and branding to enhance their credibility.</p>
+                
+                <div class="warning-signs">
+                    <h2 class="title-2">Warning Signs and Prevention</h2>
+                    <ul>
+                        <li class="description">Generic Greetings: Phishing emails often use generic greetings like "Dear Customer" instead of personalized names.</li>
+                        <li class="description">Urgent or Threatening Language: Fraudulent emails frequently create a sense of urgency or use threatening language to prompt immediate action.</li>
+                        <li class="description">Unusual Requests: Be wary of unexpected requests for sensitive information, financial transactions, or account verification.</li>
+                        <li class="description">Suspicious Links and Attachments: Hover over links to check the URL before clicking and be cautious of unsolicited attachments, especially from unknown senders.</li>
+                        <li class="description">Poor Grammar and Spelling: Many fraudulent emails contain grammatical errors and awkward phrasing that can be red flags.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Impact and Case Studies</h2>
+                    <p class="description">The impact of email fraud can be extensive, leading to financial losses, identity theft, and compromised business operations. Victims may suffer long-term consequences, including damaged credit ratings and reputational harm.</p>
+                    <p class="description">A high-profile case of email fraud involved the 2016 attack on the Democratic National Committee (DNC) in the United States. Phishing emails tricked key staff members into revealing their passwords, allowing hackers to access sensitive emails and documents. This breach had significant political and security ramifications.</p>
+                    <p class="description">Another notable example is the global WannaCry ransomware attack in 2017, which spread through phishing emails containing malicious attachments. The attack encrypted data on infected systems and demanded ransom payments, affecting organizations worldwide and causing billions in damages.</p>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="email-details">
+                    <form method="POST" action="{{url_for('fakeemail')}}">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                
+                        <label for="message">Message:</label>
+                        <textarea id="emailcontent" name="emailcontent" rows="4" required></textarea>
+                
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script>
+</body>
+</html>

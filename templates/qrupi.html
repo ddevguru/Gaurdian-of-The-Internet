@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background-fixed">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="split-container">
+            <div class="column left">
+                <!-- Content for the left column goes here -->
+                <h1 class="title">QR and UPI Payment Fraud</h1>
+                <p class="description">
+                    QR (Quick Response) and UPI (Unified Payments Interface) payment fraud involves schemes designed to deceive individuals into making payments or sharing sensitive information through QR codes or UPI transactions. These scams aim to benefit fraudsters financially, often at the significant expense of the victims. These types of fraud can be highly sophisticated and difficult to detect, making it crucial for consumers to understand their mechanisms, common tactics, and warning signs.
+                </p>
+
+                <h1 class="title">Common Forms of QR and UPI Payment Fraud</h1>
+                <h2 class="title-2">1. Fake QR Codes</h2>
+                <p class="description">Fraudsters create fake QR codes that, when scanned, direct payments to their accounts instead of legitimate recipients. These fake codes can be distributed through various means, such as fake websites, phishing emails, or even physical stickers placed over legitimate QR codes at retail locations.</p>
+                
+                <h2 class="title-2">2. Phishing Links</h2>
+                <p class="description">Phishing links are sent via SMS, email, or social media, appearing to be from legitimate sources. When clicked, these links prompt users to enter their UPI PIN or other sensitive information, which is then captured by the fraudsters for unauthorized transactions.</p>
+                
+                <h2 class="title-2">3. Impersonation Scams</h2>
+                <p class="description">Fraudsters impersonate trusted contacts or organizations and request payments through UPI. They may pose as friends, family members, or representatives from banks or companies, creating a sense of urgency to trick the victim into making quick payments.</p>
+                
+                <h2 class="title-2">4. App-Based Scams</h2>
+                <p class="description">Fraudsters create fake mobile apps that resemble legitimate payment apps. These fake apps can steal sensitive information, such as UPI PINs or bank details, leading to unauthorized transactions from the victim’s account.</p>
+                
+                <div class="warning-signs">
+                    <h2 class="title-2">Warning Signs and Prevention</h2>
+                    <ul>
+                        <li class="description">Unsolicited Payment Requests: Be wary of unsolicited payment requests via QR codes or UPI, especially from unknown contacts or sources.</li>
+                        <li class="description">High-Pressure Tactics: Fraudsters often use high-pressure tactics to create a sense of urgency. Take time to verify the legitimacy of the request through independent channels before making any payments.</li>
+                        <li class="description">Verify QR Codes: Ensure the QR code you are scanning is legitimate. Avoid scanning codes from untrusted sources or those that appear suspiciously placed.</li>
+                        <li class="description">Secure Apps: Only use official and trusted payment apps from verified sources such as the Google Play Store or Apple App Store. Avoid downloading apps from third-party websites.</li>
+                        <li class="description">Review Payment Details: Always review the recipient details before confirming a UPI transaction. Double-check the amount and the recipient’s information.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Case Studies and Impact</h2>
+                    <p class="description">One notable case of QR and UPI payment fraud involved fraudsters posing as utility company representatives. They sent phishing emails with fake QR codes, claiming that immediate payment was required to avoid service disruption. Many victims scanned the QR codes and unknowingly transferred money to the fraudsters' accounts, resulting in significant financial losses.</p>
+                    <p class="description">The impact of QR and UPI payment fraud extends beyond financial losses. Victims often experience significant emotional and psychological distress, including frustration, embarrassment, and a loss of trust in digital payment methods. Additionally, the stolen funds can lead to further financial damage and inconvenience. The broader impact includes increased costs for businesses and financial institutions in fraud prevention and a general erosion of consumer confidence in digital payment systems.</p>
+                    <p class="description">Understanding and recognizing the warning signs of QR and UPI payment fraud is essential for protecting oneself from these schemes. By staying vigilant and taking precautionary measures, consumers can reduce their risk of falling victim to these frauds and safeguard their financial well-being.</p>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="email-details">
+                    <form method="POST">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                
+                        <button type="button" onclick="submitForm()">Check</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script>
+</body>
+</html>

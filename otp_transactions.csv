@@ -1,0 +1,11 @@
+amount,user_id,phone_number,location,otp_type,is_fraud
+100,1,1234567890,New York,SMS,0
+200,2,2345678901,California,Email,1
+50,3,3456789012,Texas,SMS,0
+300,4,4567890123,Florida,Email,1
+25,5,5678901234,New York,SMS,0
+150,6,6789012345,California,Email,1
+75,7,7890123456,Texas,SMS,0
+400,8,8901234567,Florida,Email,1
+100,9,9012345678,New York,SMS,0
+250,10,123456789,California,Email,1

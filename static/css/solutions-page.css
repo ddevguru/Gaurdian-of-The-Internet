@@ -1,0 +1,103 @@
+.split-container {
+	position: relative;
+    display: flex;
+    height: 100vh;
+	margin: 10px;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+.column {
+	width: 50%;
+    overflow-y: auto;
+    padding: 40px; /* Optional: for some spacing */
+	padding-top: 0;
+}
+
+.left {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+    background-color: rgba(65, 65, 65, 0.4); /* Optional: for visual distinction */
+}
+
+.right {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+    background-color: rgba(65, 65, 65, 0.4); /* Optional: for visual distinction */	
+}
+
+.email-details {
+	display: flex;
+	justify-content: center;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	min-width: 200px;
+	max-width: 500px;
+	width: 500px;
+}
+label {
+	margin-bottom: 5px;
+}
+input, textarea {
+	margin-bottom: 15px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.checkbox-label {
+	display: flex;
+	align-items: center;
+}
+button {
+	padding: 10px;
+	background-color: #72efdd;
+	color: black;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.title {
+	margin-bottom: 15px;
+	color: aquamarine;
+	/* font-size: 48px; */
+	text-align: center;
+	margin-bottom: 20px;
+	line-height: 1.6;
+}
+
+.description {
+	text-align: justify;
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 10px;
+}
+
+.title-2 {
+	line-height: 1.6;
+	margin-top: 20px;
+}
+
+.warning-signs, .case-studies {
+	margin-top: 20px;
+}
+.warning-signs ul, .case-studies ul {
+	list-style-type: disc;
+	margin-left: 20px;
+}
+.warning-signs ul li, .case-studies ul li {
+	margin-bottom: 10px;
+}
+
+/* WebKit Browsers (Chrome, Safari) */
+.left::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+/* Firefox */
+.left {
+    overflow: auto; /* Allows scrolling */
+    scrollbar-width: none; /* Hides scrollbar */
+}

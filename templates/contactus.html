@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+	<title>Contact us Page</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: Arial, sans-serif;
+			line-height: 1.6;
+		}
+		
+		
+		.reachUs-button {
+			padding: 1rem;
+			background-color: #0dac30;
+			border: none;
+			color: white;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		.reachUs-button:hover{
+			background-color: #1ac840;
+		}
+		
+		/* banner section styles */
+		.banner {
+			text-align: center;
+			background-color: #ffffff;
+			margin: 90px;
+		}
+		
+		.banner img {
+			max-width: 100%;
+			height: auto;
+		}
+		/* Contact form styles */
+		.contact-form {
+			padding: 40px 0;
+			margin: 0 10px;
+		}
+		
+		.form-container {
+			max-width: 40%;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #ffffff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		.contact-form h2 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		
+		.form-group {
+			margin-bottom: 20px;
+		}
+		
+		.form-container label {
+			display:block;
+			font-weight: bold;
+		}
+		.form-container input, textarea{
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			margin-bottom: 1rem;
+			resize: vertical;
+		}
+		.submit-button {
+			padding: 10px 20px;
+			background-color: #0dac30;
+			border: none;
+			color: white;
+			border-radius: 4px;
+			font-size: 1rem;
+			cursor: pointer;
+		}
+		
+		/* Contact info styles */
+		.contact-info {
+			text-align: center;
+			padding: 50px 0;
+			background-color: #f7f7f7;
+		}
+		
+		.contact-info h2 {
+			margin-bottom: 20px;
+		}
+		
+		/* Footer styles */
+		footer {
+			padding: 20px;
+			text-align: center;
+			background-color: #333;
+			color: white;
+		}
+		
+		
+		/* Media queries for responsiveness */
+		@media only screen and (max-width: 768px) {
+			
+		}
+		
+	</style>
+</head>
+
+<body>
+	<!-- Header section -->
+	<header>
+		<div class="logo">
+			
+			<a href="/index">GUARDIANS OF THE INTERNET</a>
+			<div class="menu-toggle" id="menu-toggle">&#9776;</div>
+		</div>
+		<nav>
+			<ul id="nav-links">
+				<div><a href="/home">Home</a></div>
+				<div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+				<div class="dropdown" id="dropdown">
+					<a href="#" class="dropbtn">Solution</a>
+					<div class="dropdown-content">
+						<a href="{{url_for('investment')}}">Investment Fraud</a>
+						<a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+						<a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+						<a href="{{url_for('insurance')}}">Insurance Detection</a>
+						<a href="#">QR and UPI Frauds</a>
+						<a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+						<a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+						<a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+						<a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+						<a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+						<a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+						<a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+					</div>
+				</div>
+				<div><a href="#">Resources</a></div>
+				<div><a href="#company">Contact Us</a></div>
+				<div class="auth-buttons">
+					<!-- <a href="#" class="sign-in">Profile</a> -->
+					<a href="{{url_for('logout')}}" class="get-started">Logout</a>
+				</div>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- banner section -->
+	<section class="banner">
+		<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png"
+			alt="Welcome to our Contact Us page">
+		<h1>Get in Touch With Us</h1>
+		<p>
+		We're here to answer any questions you may have.
+		</p>
+	</section>
+
+	<!-- Contact form -->
+	<section class="contact-form">
+		<div class="form-container">
+			<h2>Your Details</h2>
+			<form action="{{url_for('contact')}}" method="POST">
+
+				<label for="name">Name: </label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="email">Email: </label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="phone">Phone: </label>
+				<input type="tel" id="phone" name="phone">
+
+				<label for="message">Message: </label>
+				<textarea id="message" name="message" rows="4" required></textarea>
+
+				<input type="submit" value="Submit">
+
+			</form>
+		</div>
+	</section>
+
+	<!-- Company contact info -->
+	<section class="contact-info">
+		<h2>Contact Information</h2>
+		<address>
+			Guardians of The Internet<br>
+			Ostwal Gate<br>
+			Boisar, Maharashtra 401501<br>
+			Phone: <a style="text-decoration: none;color:black" href="tel:+91 79725 13887">+91 79725 13887</a><br>
+			Email: <a style="text-decoration: none;color:black" href="mailto:121deepak2104@sjcem.edu.in">121deepak2104@sjcem.edu.in</a>
+		</address>
+	</section>
+
+	<!-- Footer section -->
+	<footer>
+		<p>
+		© 2023 Guardians of The Internet. All rights reserved.
+		</p>
+	</footer>
+	<script>
+		// JavaScript function to toggle the navigation menu
+
+function openNavbar() {
+	const navMenu = document.getElementById("nav-menu");
+	navMenu.classList.toggle("active");
+	}
+	
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background-fixed">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="split-container">
+            <div class="column left">
+                <!-- Content for the left column goes here -->
+                <h1 class="title">Fake Commercial Sites</h1>
+                <!-- Add more content here to make it scrollable -->
+                <p class="description">
+                    Fake commercial sites are fraudulent websites that pose as legitimate online stores or service providers to deceive consumers into making purchases or sharing personal information. The primary goal of these schemes is to benefit the fraudsters financially, often at the significant expense of the victims. These sites can be highly sophisticated and difficult to detect, making it crucial for consumers to understand their mechanisms, common tactics, and warning signs.
+                </p>
+
+                <h1 class="title">Common Forms of Fake Commercial Sites</h1>
+                <h2 class="title-2">1. Counterfeit Goods Sites</h2>
+                <p class="description">Counterfeit goods sites sell imitation products that are often advertised as genuine. These sites use images and descriptions from legitimate brands to lure consumers into purchasing fake products. Buyers typically receive substandard items or nothing at all, while the fraudsters profit from the sale.</p>
+                
+                <h2 class="title-2">2. Phishing Sites</h2>
+                <p class="description">Phishing sites masquerade as well-known e-commerce platforms or payment gateways. They aim to steal consumers' login credentials, credit card information, and other personal data. Once the victim enters their information, the fraudsters use it for identity theft or unauthorized transactions.</p>
+                
+                <h2 class="title-2">3. Non-Delivery Scam Sites</h2>
+                <p class="description">Non-delivery scam sites advertise popular products at significantly reduced prices to attract buyers. After consumers make a purchase, they either receive nothing or a worthless item. These sites often disappear shortly after collecting payments, making it difficult for victims to recover their money.</p>
+                
+                <h2 class="title-2">4. Fake Travel and Event Booking Sites</h2>
+                <p class="description">These sites pose as legitimate travel agencies or event ticket vendors, offering deals on flights, hotels, and event tickets. Consumers who book through these sites often find that their reservations are fake or non-existent when they attempt to use them.</p>
+                
+                <div class="warning-signs">
+                    <h2 class="title-2">Warning Signs and Prevention</h2>
+                    <ul>
+                        <li class="description">Too-Good-To-Be-True Prices: Be wary of sites offering products or services at prices significantly lower than the market rate. If it seems too good to be true, it likely is.</li>
+                        <li class="description">Lack of Contact Information: Check for physical addresses, customer service numbers, and email contacts. Legitimate businesses provide multiple ways for customers to reach them.</li>
+                        <li class="description">Poor Website Design and Functionality: Many fake sites have poor-quality design, broken links, and frequent typographical errors. Legitimate businesses invest in professional web design.</li>
+                        <li class="description">No Secure Payment Options: Ensure the site uses secure payment methods and has a valid SSL certificate (indicated by "https" in the URL and a padlock icon). Avoid sites that only accept wire transfers or untraceable payment methods.</li>
+                        <li class="description">Unverified Customer Reviews: Be skeptical of websites that display only positive reviews or lack third-party reviews. Check independent review sites and forums for feedback.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Case Studies and Impact</h2>
+                    <p class="description">One notable case of a fake commercial site involved a fraudulent online store that mimicked a popular electronics retailer. The site advertised discounted high-end electronics and collected payments via credit card. Consumers who made purchases either received counterfeit products or nothing at all. The site was eventually shut down, but not before defrauding thousands of victims.</p>
+                    <p class="description">The impact of fake commercial sites extends beyond financial losses. Victims often experience significant emotional and psychological distress, including anger, frustration, and loss of trust in online shopping. Additionally, the stolen personal and financial information can lead to identity theft and further financial damage. The broader impact includes increased costs for cybersecurity measures and a general erosion of consumer confidence in e-commerce.</p>
+                    <p class="description">Understanding and recognizing the warning signs of fake commercial sites is essential for protecting oneself from these schemes. By staying vigilant and taking precautionary measures, consumers can reduce their risk of falling victim to online fraud.</p>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="email-details">
+                    <form method="POST" action="/submit_url">
+                        <label for="email">URL:</label>
+                        <input type="text" id="email" name="url" required>
+                
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script></body>
+</html>

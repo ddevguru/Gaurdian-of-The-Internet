@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background-fixed">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="split-container">
+            <div class="column left">
+                <!-- Content for the left column goes here -->
+                <h1 class="title">Credit Card Fraud Detection</h1>
+                <p class="description">
+                    Credit card fraud involves unauthorized use of a credit card to make purchases, withdraw funds, or gain access to personal information. The primary goal of these schemes is to benefit fraudsters financially, often at the significant expense of the victims. Credit card fraud can be highly sophisticated and difficult to detect, making it crucial for consumers to understand its mechanisms, common tactics, and warning signs.
+                </p>
+
+                <h1 class="title">Common Forms of Credit Card Fraud</h1>
+                <h2 class="title-2">1. Card-Not-Present (CNP) Fraud</h2>
+                <p class="description">CNP fraud occurs when fraudsters use stolen credit card information to make online or phone purchases without the physical card. This type of fraud is common in e-commerce and can be difficult to detect immediately.</p>
+                
+                <h2 class="title-2">2. Skimming</h2>
+                <p class="description">Skimming involves using a device to capture credit card information during a legitimate transaction. Skimmers are often placed on ATMs, gas station pumps, or point-of-sale terminals. The captured data is then used to create counterfeit cards or make online purchases.</p>
+                
+                <h2 class="title-2">3. Phishing</h2>
+                <p class="description">Phishing scams use emails, texts, or phone calls to trick individuals into providing their credit card information. Fraudsters pose as legitimate companies or financial institutions, claiming there is an issue with the victim’s account that requires immediate attention.</p>
+                
+                <h2 class="title-2">4. Data Breaches</h2>
+                <p class="description">Data breaches occur when hackers infiltrate systems of retailers, financial institutions, or other organizations to steal large volumes of credit card information. This data is then sold on the dark web or used for fraudulent transactions.</p>
+                
+                <div class="warning-signs">
+                    <h2 class="title-2">Warning Signs and Prevention</h2>
+                    <ul>
+                        <li class="description">Unfamiliar Transactions: Regularly review your credit card statements for unfamiliar transactions. Report any suspicious activity to your card issuer immediately.</li>
+                        <li class="description">Requests for Personal Information: Be cautious of unsolicited requests for personal information, especially via email or phone. Legitimate companies will not ask for sensitive information in this manner.</li>
+                        <li class="description">Skimming Devices: Inspect ATMs and point-of-sale terminals for unusual attachments or modifications. If a device looks tampered with, do not use it and report it to the establishment.</li>
+                        <li class="description">Secure Online Transactions: Ensure that websites are secure (look for "https" in the URL and a padlock icon) before entering credit card information. Avoid using public Wi-Fi for financial transactions.</li>
+                        <li class="description">Strong Passwords: Use strong, unique passwords for online accounts and enable two-factor authentication where available. This adds an extra layer of security against unauthorized access.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Case Studies and Impact</h2>
+                    <p class="description">One notable case of credit card fraud involved a large-scale data breach at a major retailer. Hackers accessed the company’s payment processing system and stole millions of credit card numbers. The breach resulted in significant financial losses for consumers and the company, along with a loss of consumer trust.</p>
+                    <p class="description">The impact of credit card fraud extends beyond financial losses. Victims often experience significant emotional and psychological distress, including frustration, anxiety, and a loss of trust in financial institutions. Additionally, resolving credit card fraud can be time-consuming and may involve contacting multiple parties to rectify the situation. The broader impact includes increased costs for businesses and financial institutions in fraud prevention and a general erosion of consumer confidence in credit card transactions.</p>
+                    <p class="description">Understanding and recognizing the warning signs of credit card fraud is essential for protecting oneself from these schemes. By staying vigilant and taking precautionary measures, consumers can reduce their risk of falling victim to credit card fraud and safeguard their financial well-being.</p>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="email-details">
+                    <form method="POST">
+                        <label for="email">Amount:</label>
+                        <input type="number" id="email" name="amount" required>
+                
+                        <label for="subject">Usder Id:</label>
+                        <input type="text" id="subject" name="user_id" required>
+                
+                        <label for="message">Merchant Id:</label>
+                        <input type="text" id="subject" name="merchant_id" required>
+                        
+                        <label for="message">Location:</label>
+                        <input type="text" id="subject" name="location" required>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script>
+</body>
+</html>

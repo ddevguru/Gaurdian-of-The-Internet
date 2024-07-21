@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        form {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        
+        textarea {
+            width: 80%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        
+        a {
+            display: inline-block;
+            margin: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        .result h2 {
+            color: #333;
+        }
+        
+        .result p {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Detection Result</h1>
+    <div class="result">
+        <h2>Result</h2>
+        <p>{{ result }}</p>
+    </div>
+    
+    <h2>All Claims</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Claimant Name</th>
+            <th>Claim Amount</th>
+            <th>Claim Description</th>
+            <th>Claim Date</th>
+            <th>Result</th>
+            <th>Submission Time</th>
+        </tr>
+        {% for claim in claims %}
+        <tr>
+            <td>{{ claim.id }}</td>
+            <td>{{ claim.claimant_name }}</td>
+            <td>{{ claim.claim_amount }}</td>
+            <td>{{ claim.claim_description }}</td>
+            <td>{{ claim.claim_date }}</td>
+            <td>{{ claim.result }}</td>
+            <td>{{ claim.submission_time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/submit">Submit Another Claim</a> | <a href="/">Home</a>
+</body>
+</html>

@@ -1,0 +1,11 @@
+amount,user_id,charity_id,location,donation_type,is_fraud
+100,1,redcross,New York,Online,0
+200,2,unicef,California,Offline,1
+50,3,wwf,Texas,Online,0
+300,4,redcross,Florida,Offline,1
+25,5,unicef,New York,Online,0
+150,6,wwf,California,Offline,1
+75,7,redcross,Texas,Online,0
+400,8,unicef,Florida,Offline,1
+100,9,wwf,New York,Online,0
+250,10,redcross,California,Offline,1

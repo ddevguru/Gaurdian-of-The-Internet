@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+	<div class="video-background">
+		<video autoplay muted loop id="bg-video">
+			<source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+	</div>
+	<div class="content">
+		<header>
+            <div class="logo">
+				
+				<a href="{{url_for('index')}}">GUARDIANS OF THE INTERNET</a>
+				<div class="menu-toggle" id="menu-toggle">&#9776;</div>
+			</div>
+            <nav>
+                <ul id="nav-links">
+                    <a href="/products" style="text-decoration:none;color:white;">Products</a>
+                    <a href="/about" style="text-decoration:none;color:white;">About Us</a>
+					<div class="auth-buttons">
+						<a href="{{url_for('signin')}}" class="sign-in">Sign In</a>
+						<a href="{{url_for('signup')}}" class="get-started">Sign Up</a>
+					</div>
+                </ul>
+            </nav>
+        </header>
+        <main>
+			<div class="headline">
+				<h1 class="catch-line">Protecting You from Fraud,</h1>
+				<h1 class="catch-line2">One Click at a Time</h1>
+			</div>
+            
+            <p>Empowering individuals and businesses with advanced fraud detection and prevention solutions to safeguard your assets and ensure peace of mind.</p>
+            
+        </main>
+    </div>
+	<div class="content-2">
+		<main>
+			<div class="heading">
+				<h1>IN PRODUCTION</h1>
+			</div>
+		</main>
+	</div>
+    <script src="{{url_for('static', filename='javascript/script.js')}}"></script>
+</body>
+</html>

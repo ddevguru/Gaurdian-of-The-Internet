@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background-fixed">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="split-container">
+            <div class="column left">
+                <!-- Content for the left column goes here -->
+                <h1 class="title">Referral and Promo Abuse Prevention</h1>
+                <p class="description">
+                    Referral and promo abuse involves schemes where individuals exploit referral programs and promotional offers in ways that were not intended by the businesses offering them. These abuses can result in significant financial losses and disrupt the integrity of marketing programs. Understanding how these schemes operate and implementing effective preventive measures is crucial for safeguarding against such abuses.
+                </p>
+
+                <h1 class="title">Common Forms of Referral and Promo Abuse</h1>
+                <h2 class="title-2">1. Self-Referencing</h2>
+                <p class="description">Self-referencing occurs when individuals create multiple accounts or use multiple identities to refer themselves and receive referral rewards. This abuse undermines the effectiveness of referral programs and can lead to inflated costs for businesses.</p>
+                
+                <h2 class="title-2">2. Fake Referrals</h2>
+                <p class="description">Fraudsters may use fake or stolen identities to generate referrals. These fake referrals can be used to gain promotional rewards without any genuine customer acquisition, leading to financial losses for the business.</p>
+                
+                <h2 class="title-2">3. Promo Code Sharing</h2>
+                <p class="description">Promo code sharing involves distributing promotional codes outside of authorized channels, such as posting them on public forums or selling them on third-party websites. This can result in excessive redemptions and unanticipated financial impacts for businesses.</p>
+                
+                <h2 class="title-2">4. Bot-driven Abuse</h2>
+                <p class="description">Automated bots can be used to generate referrals or redeem promo codes in bulk. This abuse can quickly escalate and drain resources, leading to significant financial and operational challenges.</p>
+                
+                <div class="warning-signs">
+                    <h2 class="title-2">Warning Signs and Prevention</h2>
+                    <ul>
+                        <li class="description">Unusual Referral Activity: Monitor referral metrics for patterns that suggest fraudulent activity, such as high volumes of referrals from the same IP address or multiple accounts from the same user.</li>
+                        <li class="description">Promo Code Distribution: Limit the distribution of promo codes to authorized channels and use unique codes to track and manage redemptions.</li>
+                        <li class="description">Account Verification: Implement verification processes to ensure the legitimacy of referrals and account registrations. This can include email verification, CAPTCHA tests, or identity checks.</li>
+                        <li class="description">Monitor for Bots: Use anti-bot technologies to detect and prevent automated abuse of referral and promo systems. This can involve traffic analysis and behavioral monitoring.</li>
+                        <li class="description">Regular Audits: Conduct regular audits of referral and promo programs to identify and address any irregularities or signs of abuse.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Case Studies and Impact</h2>
+                    <p class="description">One notable case of referral and promo abuse involved a company’s referral program being exploited by a group of fraudsters who created fake accounts and generated large volumes of referrals. The resulting rewards drained the company’s marketing budget and skewed the program’s effectiveness.</p>
+                    <p class="description">The impact of referral and promo abuse extends beyond financial losses. It can lead to inflated marketing costs, reduced ROI for marketing campaigns, and a loss of trust in promotional programs. Businesses may also face operational challenges in managing and mitigating the effects of abuse, which can disrupt overall marketing strategies.</p>
+                    <p class="description">Understanding and recognizing the warning signs of referral and promo abuse is essential for maintaining the integrity of promotional programs. By implementing preventive measures and staying vigilant, businesses can reduce their risk of abuse and ensure the effectiveness of their marketing efforts.</p>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="email-details">
+                    <form method="POST" action="{{url_for('submit_referral_promo')}}">
+                        <label for="email">Referral Code:</label>
+                        <input type="email" id="email" name="referral_code" required>
+                
+                        <label for="subject">Promo Code:</label>
+                        <input type="text" id="subject" name="promo_code" required>
+                
+                        <label for="subject">Number of Referrals:</label>
+                        <input type="text" id="subject" name="num_referrals" required>
+
+                        <label for="subject">Total Spent:</label>
+                        <input type="number" step="0.01" name="total_spent" required>
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script>
+</body>
+</html>

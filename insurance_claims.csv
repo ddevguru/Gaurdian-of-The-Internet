@@ -1,0 +1,4 @@
+claim_id,claimant_name,claim_amount,claim_description,claim_date,label
+1,John Doe,5000,Accident at work,2024-01-15,genuine
+2,Jane Smith,20000,Fire damage to property,2024-02-10,fraudulent
+3,Emily Brown,3000,Medical expenses for surgery,2024-03-05,genuine

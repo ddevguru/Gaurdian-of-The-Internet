@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background-fixed">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="split-container">
+            <div class="column left">
+                <!-- Content for the left column goes here -->
+                <h1 class="title">Insurance Fraud</h1>
+                <!-- Add more content here to make it scrollable -->
+                <p class="description">
+                    Insurance fraud involves deceiving an insurance company or agent to receive payments or benefits to which the fraudster is not entitled. This type of fraud can occur in various forms and can be committed by individuals or organized groups. Understanding the common methods, warning signs, and preventive measures associated with insurance fraud is essential for protecting against these fraudulent activities.
+                </p>
+
+                <h1 class="title">Common Methods in Insurance Fraud</h1>
+                <h2 class="title-2">1. False Claims</h2>
+                <p class="description">One of the most prevalent forms of insurance fraud is filing false claims. Individuals might claim compensation for accidents, injuries, or damages that never occurred. For instance, someone might stage a car accident or report stolen property that they still possess.</p>
+                
+                <h2 class="title-2">2. Exaggerated Claims</h2>
+                <p class="description">In some cases, policyholders may exaggerate the extent of legitimate claims to receive higher payouts. For example, after a minor car accident, a claimant might report more extensive vehicle damage or personal injuries than actually occurred.</p>
+                
+                <h2 class="title-2">3. Health Insurance Fraud</h2>
+                <p class="description">This type of fraud involves falsifying or exaggerating medical claims. Healthcare providers might bill for services that were never provided, or patients might claim for treatments they did not receive. Additionally, some individuals may use false information to obtain coverage or prescription drugs.</p>
+                
+                <h2 class="title-2">4. Life Insurance Fraud</h2>
+                <p class="description">Life insurance fraud can involve policyholders providing false information on applications, such as hiding pre-existing conditions or high-risk activities, to obtain coverage. In more severe cases, fraudsters might stage a death to collect the life insurance payout.</p>
+                
+                <h2 class="title-2">5. Agent Fraud</h2>
+                <p class="description">Insurance agents themselves can also commit fraud. For instance, an agent might pocket premiums without purchasing a policy for the client, or they might create fake policies and collect commissions on them.</p>
+                
+                <div class="warning-signs">
+                    <h2 class="title-2">Warning Signs and Prevention</h2>
+                    <ul>
+                        <li class="description">Inconsistent Details: Be wary of claims with inconsistent or changing details, as these can indicate fraudulent activity.</li>
+                        <li class="description">High Claim Frequency: Multiple claims from the same policyholder in a short period can be a red flag for potential fraud.</li>
+                        <li class="description">Unusual Behavior: Suspicious behavior, such as reluctance to provide documentation or overly cooperative claimants, may indicate fraud.</li>
+                        <li class="description">Third-Party Involvement: Pay attention to claims involving third parties who are not directly involved in the incident, as this can be a sign of fraud.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Impact and Case Studies</h2>
+                    <p class="description">The impact of insurance fraud is extensive, affecting not only insurance companies but also policyholders and the broader economy. Fraudulent claims drive up the cost of insurance premiums for everyone, as insurers pass on the costs to customers. Additionally, insurance companies may suffer financial losses, reputational damage, and increased administrative costs due to fraud.</p>
+                    <p class="description">One notable case of insurance fraud involved a group in California that staged multiple car accidents to collect insurance payouts. The fraudsters would orchestrate collisions, often with innocent drivers, and then file exaggerated injury claims. This scam resulted in millions of dollars in fraudulent payouts before the perpetrators were caught and prosecuted.</p>
+                    <p class="description">Another significant example is the case of Dr. Farid Fata, a Michigan oncologist who was found guilty of administering unnecessary chemotherapy treatments to patients to fraudulently bill Medicare and private insurers. Fata's actions led to severe harm to patients and highlighted the devastating impact of health insurance fraud.</p>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="email-details">
+                    <form method="POST">
+                        <label for="email">Claimant Name:</label>
+                        <input type="text" id="email" name="claimant_name" required>
+                
+                        <label for="subject">Claim Amount:</label>
+                        <input type="text" id="number" name="claim_amount" required>
+                
+                        <label for="message">Claim Description:</label>
+                        <textarea id="message" name="claim_description" rows="4" required></textarea>
+                
+                        <label for="claim_date">Claim Date:</label>
+                        <input type="date" name="claim_date" required>
+
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script>
+</body>
+</html>

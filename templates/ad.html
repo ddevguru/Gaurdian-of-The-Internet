@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background-fixed">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="split-container">
+            <div class="column left">
+                <!-- Content for the left column goes here -->
+                <h1 class="title">Ad Fraud</h1>
+                <!-- Add more content here to make it scrollable -->
+                <p class="description">
+                    Ad fraud, also known as advertising fraud, involves deceptive practices aimed at generating revenue through fraudulent means in the digital advertising ecosystem. This type of fraud can take various forms, including the manipulation of online advertisements to falsely inflate metrics such as clicks, impressions, and conversions. Understanding the mechanisms, common tactics, and preventive measures associated with ad fraud is essential for advertisers, publishers, and platforms to safeguard their investments and maintain the integrity of digital advertising.
+                </p>
+
+                <h1 class="title">Common Forms of Ad Fraud</h1>
+                <h2 class="title-2">1. Click Fraud</h2>
+                <p class="description">Click fraud occurs when automated bots or hired individuals repeatedly click on ads to inflate the number of clicks and generate revenue for the fraudster. This type of fraud can drain advertisers' budgets without delivering genuine engagement or conversions. Click fraud is especially prevalent in pay-per-click (PPC) advertising models.</p>
+                
+                <h2 class="title-2">2. Impression Fraud</h2>
+                <p class="description">Impression fraud involves generating fake ad views to increase the number of impressions an ad receives. This can be done through bots or scripts that load ads in the background without any real user engagement. Fraudsters use this method to deceive advertisers into paying for views that were never actually seen by human users.</p>
+                
+                <h2 class="title-2">3. Ad Stacking</h2>
+                <p class="description">In ad stacking, multiple ads are layered on top of each other in a single ad placement. Only the top ad is visible to users, but impressions are counted for all the ads in the stack. This practice allows fraudsters to charge for multiple impressions while only displaying one ad.</p>
+                
+                <h2 class="title-2">4. Domain Spoofing</h2>
+                <p class="description">Domain spoofing involves falsifying the domain from which an ad request originates. Fraudsters pretend that ad requests are coming from high-quality, premium websites when they are actually from low-quality or fraudulent sites. This tricks advertisers into paying premium rates for ads displayed on undesirable websites.</p>
+                
+                <h2 class="title-2">5. Pixel Stuffing</h2>
+                <p class="description">Pixel stuffing involves embedding ads into a single pixel on a website, making them invisible to users. Fraudsters can generate numerous impressions from a single page view, as each hidden ad is counted as an impression even though it is not actually seen by users.</p>
+                
+                <h2 class="title-2">6. Fake Leads and Conversion</h2>
+                <p class="description">Fraudsters generate fake leads or conversions by filling out forms, making purchases, or completing other desired actions using bots or low-quality traffic sources. This practice inflates conversion metrics and deceives advertisers into believing their campaigns are successful.</p>
+                
+                <div class="warning-signs">
+                    <h2 class="title-2">Warning Signs and Prevention</h2>
+                    <ul>
+                        <li class="description">Unusual Traffic Patterns: Sudden spikes in traffic, especially from unusual geographic locations or sources, can indicate fraudulent activity.</li>
+                        <li class="description">High Bounce Rates: If users quickly leave a website after clicking an ad, it may suggest that the traffic is not genuine.</li>
+                        <li class="description">Low Conversion Rates: A high number of clicks or impressions with few conversions can signal click or impression fraud.</li>
+                        <li class="description">Suspicious Referral Sources: Traffic from unfamiliar or questionable websites should be scrutinized for potential fraud.</li>
+                        <li class="description">Inconsistent Metrics: Discrepancies between ad platform metrics and website analytics can be a red flag for fraudulent activity.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Impact and Case Studies</h2>
+                    <p class="description">Ad fraud has significant financial implications for the digital advertising industry. It is estimated to cost advertisers billions of dollars annually, draining budgets and reducing the effectiveness of campaigns. Beyond financial losses, ad fraud undermines trust in digital advertising and can lead to reputational damage for both advertisers and publishers.</p>
+                    <p class="description">One high-profile case of ad fraud involved the Methbot operation, discovered in 2016. This sophisticated scheme used bots to generate fake ad impressions, resulting in estimated losses of $3 million to $5 million per day for advertisers. The bots mimicked human behavior, making it difficult to detect the fraud, and spoofed premium publisher websites to deceive advertisers into paying for high-value placements.</p>
+                    <p class="description">Another notable example is the HyphBot operation, which generated over a billion fake ad requests daily, resulting in significant financial losses for advertisers. HyphBot used a network of bots to simulate human traffic and create false impressions, clicks, and video views.</p>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="email-details">
+                    <form method="POST" action="{{url_for('submit_ad')}}">
+                        <label for="email">AD Platform:</label>
+                        <input type="text" id="email" name="ad_platform" required>
+                
+                        <label for="subject">Clicks:</label>
+                        <input type="text" id="subject" name="clicks" required>
+
+                        <label for="subject">Impressions:</label>
+                        <input type="text" id="subject" name="impressions" required>
+
+                        <label for="subject">Country:</label>
+                        <input type="text" id="subject" name="country" required>
+                
+                        <label for="subject">Browser:</label>
+                        <input type="text" id="subject" name="browser" required>
+                
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script>
+</body>
+</html>

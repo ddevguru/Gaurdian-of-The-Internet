@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background-fixed">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="split-container">
+            <div class="column left">
+                <!-- Content for the left column goes here -->
+                <h1 class="title">Gift Card Fraud Prevention</h1>
+                <p class="description">
+                    Gift card fraud involves schemes designed to deceive individuals into purchasing or using gift cards in ways that benefit fraudsters financially. This type of fraud can be highly sophisticated and difficult to detect, making it crucial for consumers to understand its mechanisms, common tactics, and warning signs. Protecting oneself from gift card fraud involves being aware of how these scams operate and taking preventive measures to avoid becoming a victim.
+                </p>
+
+                <h1 class="title">Common Forms of Gift Card Fraud</h1>
+                <h2 class="title-2">1. Impersonation Scams</h2>
+                <p class="description">Impersonation scams involve fraudsters posing as trusted individuals or organizations, such as government agencies, tech support, or family members. They contact victims via phone, email, or text, claiming that there is an urgent need for payment and instructing the victim to purchase gift cards and provide the codes.</p>
+                
+                <h2 class="title-2">2. Online Marketplaces</h2>
+                <p class="description">Fraudsters exploit online marketplaces where gift cards are bought and sold. They may sell gift cards that are either already used or obtained through stolen credit card information. Buyers on these platforms often find that the gift cards have no value when they try to use them.</p>
+                
+                <h2 class="title-2">3. Card Cloning</h2>
+                <p class="description">Card cloning involves physically tampering with gift cards displayed in stores. Fraudsters record the card numbers and wait until the cards are activated. Once activated, they use the information to drain the funds before the legitimate purchaser can use the card.</p>
+                
+                <h2 class="title-2">4. Phishing Emails and Texts</h2>
+                <p class="description">Phishing scams use emails and texts that appear to come from reputable companies, asking recipients to click on links or provide gift card information. These messages often claim that there is a problem with the recipient's account or that they have won a prize, requiring gift card details for verification.</p>
+                
+                <div class="warning-signs">
+                    <h2 class="title-2">Warning Signs and Prevention</h2>
+                    <ul>
+                        <li class="description">Unsolicited Requests: Be wary of unsolicited requests for gift card payments, especially from unknown contacts or organizations.</li>
+                        <li class="description">High-Pressure Tactics: Fraudsters often use high-pressure tactics to create a sense of urgency. Take the time to verify the legitimacy of the request through independent channels.</li>
+                        <li class="description">Requests for Gift Card Codes: Legitimate organizations do not request payment via gift cards. Never provide gift card codes to someone you do not know or trust.</li>
+                        <li class="description">Verify Before Purchase: Before purchasing gift cards, check for signs of tampering, such as scratched-off PINs or damaged packaging. Buy gift cards directly from reputable retailers.</li>
+                        <li class="description">Secure Online Transactions: When buying or using gift cards online, ensure the website is secure and reputable. Look for "https" in the URL and read reviews of the site.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Case Studies and Impact</h2>
+                    <p class="description">One notable case of gift card fraud involved a scam where fraudsters posed as IRS agents and contacted victims, claiming they owed back taxes. They instructed the victims to purchase gift cards and provide the codes as payment to avoid arrest. Many individuals, fearing legal consequences, complied and lost significant amounts of money.</p>
+                    <p class="description">The impact of gift card fraud extends beyond financial losses. Victims often experience significant emotional and psychological distress, including embarrassment, frustration, and a loss of trust in electronic communication. Additionally, the stolen funds can lead to further financial damage and inconvenience. The broader impact includes increased costs for businesses and retailers in fraud prevention and a general erosion of consumer confidence in gift card transactions.</p>
+                    <p class="description">Understanding and recognizing the warning signs of gift card fraud is essential for protecting oneself from these schemes. By staying vigilant and taking precautionary measures, consumers can reduce their risk of falling victim to gift card fraud and safeguard their financial well-being.</p>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="email-details">
+                    <form method="POST" action="{{url_for('submit_gift_card')}}">
+                        <label for="email">Amount</label>
+                        <input type="text" id="email" name="amount" required>
+                
+                        <label for="subject">User Id:</label>
+                        <input type="text" id="subject" name="user_id" required>
+                
+                        <label for="message">Merchant Id:</label>
+                        <input type="text" id="subject" name="merchant_id" required>
+                    
+                        <label for="message">Location:</label>
+                        <input type="text" id="subject" name="location" required>
+
+                        <label for="message">Gift Card Type:</label>
+                        <input type="text" id="subject" name="gift_card_type" required>
+                        
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script></body>
+</html>

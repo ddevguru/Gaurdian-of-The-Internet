@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background-fixed">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="split-container">
+            <div class="column left">
+                <!-- Content for the left column goes here -->
+                <h1 class="title">Fake OTP Fraud</h1>
+                <!-- Add more content here to make it scrollable -->
+                <p class="description">
+                    Fake OTP (One-Time Password) fraud is a type of scam where fraudsters trick individuals into revealing their OTPs, which are used to authorize transactions or access accounts. This type of fraud exploits the trust individuals place in OTPs as a secure method of verification. Understanding how fake OTP fraud operates, the common tactics used by fraudsters, and the preventive measures that can be taken is crucial in safeguarding against this type of scam.
+                </p>
+
+                <h1 class="title">Common Tactics in Fake OTP Fraud</h1>
+                <h2 class="title-2">1. Phishing Calls and Texts</h2>
+                <p class="description">Fraudsters often initiate fake OTP fraud through phishing calls or text messages. They may pose as representatives from banks, government agencies, or other trusted organizations, claiming there is an issue with the recipient's account that requires immediate attention. The fraudster then asks the victim to share the OTP sent to their phone to resolve the supposed issue.</p>
+                
+                <h2 class="title-2">2. Impersonating Service Providers</h2>
+                <p class="description">In some cases, fraudsters impersonate service providers and send messages that appear to be from legitimate sources, such as banks or online platforms. These messages might claim that unusual activity has been detected on the recipient’s account or that a verification process is needed to prevent account suspension. The message prompts the recipient to enter their OTP on a fake website designed to capture this information.</p>
+                
+                <h2 class="title-2">3. Social Engineering</h2>
+                <p class="description">Fraudsters use social engineering techniques to create a sense of urgency or fear, pressuring victims into quickly complying with their requests. They may claim that immediate action is required to prevent significant losses or legal consequences. This manipulation makes victims more likely to share their OTPs without proper verification.</p>
+                
+                <h2 class="title-2">4. Fake Apps and Websites</h2>
+                <p class="description">Fraudsters may create fake apps or websites that closely mimic legitimate ones. When victims try to log in or make transactions through these platforms, they are asked to enter their OTP, which is then intercepted by the fraudsters. These fake platforms are often very convincing and can easily deceive unsuspecting users.</p>
+                
+                <div class="warning-signs">
+                    <h2 class="title-2">Warning Signs and Prevention</h2>
+                    <ul>
+                        <li class="description">Unsolicited OTP Requests: Be wary of any unsolicited request for an OTP, especially if you did not initiate a transaction or login.</li>
+                        <li class="description">Urgent or Threatening Language: Messages that create a sense of urgency or use threatening language to prompt immediate action should be treated with suspicion.</li>
+                        <li class="description">Unfamiliar Callers or Numbers: Verify the identity of anyone asking for your OTP, particularly if the request comes from an unfamiliar number or caller.</li>
+                        <li class="description">Suspicious Websites and Apps: Avoid entering your OTP on websites or apps that seem suspicious or are not accessed through official channels.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Impact and Case Studies</h2>
+                    <p class="description">The impact of fake OTP fraud can be devastating, leading to unauthorized access to financial accounts, significant financial loss, and identity theft. Victims may face difficulties recovering their stolen funds and restoring their compromised accounts.</p>
+                    <p class="description">A notable case involved a series of frauds in India where fraudsters posing as bank officials called customers claiming that their accounts were under threat. They convinced victims to share their OTPs, which were then used to transfer funds out of their accounts. The widespread nature of these scams led to substantial financial losses for many individuals and highlighted the need for better public awareness and education.</p>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="email-details">
+                    <form method="POST">
+                        <label for="email">Amount:</label>
+                        <input type="text" id="email" name="amount" required>
+                
+                        <label for="subject">User Id:</label>
+                        <input type="text" id="subject" name="user_id" required>
+                
+                        <label for="subject">Phone Number:</label>
+                        <input type="text" id="subject" name="phone_number" required>
+                
+                        <label for="subject">Location:</label>
+                        <input type="text" id="subject" name="location" required>
+                
+                        <label for="subject">Otp Type:</label>
+                        <input type="text" id="subject" name="otp_type" required>
+                
+                        
+        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script></body>
+</html>

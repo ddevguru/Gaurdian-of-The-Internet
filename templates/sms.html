@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Internet</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/solutions-page.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background-fixed">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{url_for('static',filename='assets/videos/your-video.mp4')}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <a href="/temps/index.html">GUARDIANS OF THE INTERNET</a>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            </div> <nav>
+                <ul id="nav-links">
+					<div><a href="/home">Home</a></div>
+                    <div><a href="{{url_for('afterloginaboutus')}}">About Us</a></div>
+                    <div class="dropdown" id="dropdown">
+                        <a href="#" class="dropbtn">Solution</a>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('investment')}}">Investment Fraud</a>
+                            <a href="{{url_for('fakeemail')}}">Phishing Detection</a>
+                            <a href="{{url_for('sms')}}">SMS Fraud Detection</a>
+                            <a href="{{url_for('insurance')}}">Insurance Detection</a>
+                            <a href="#">QR and UPI Frauds</a>
+                            <a href="{{url_for('submit_credit_card')}}">Credit Card Frauds</a>
+                            <a href="{{url_for('submit_gift_card')}}">Gift Card Scams</a>
+                            <a href="{{url_for('submit_charity_fund')}}">Charity Fund Scams</a>
+                            <a href="{{url_for('submit_otp')}}">Fake OTP Scams</a>
+                            <a href="{{url_for('submit_url')}}">Fake Commercial Sites</a>
+                            <a href="{{url_for('submit_ad')}}">Ad Fraud Detection</a>
+                            <a href="{{url_for('submit_referral_promo')}}">Referral and Promo Abuse</a>
+                        </div>
+                    </div>
+                    <!-- <div><a href="#">Resources</a></div> -->
+                    <div><a href="#company">Contact Us</a></div>
+                    <div class="auth-buttons">
+                        <!-- <a href="#" class="sign-in">Profile</a> -->
+                        <a href="{{url_for('logout')}}" class="get-started">Logout</a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="split-container">
+            <div class="column left">
+                <!-- Content for the left column goes here -->
+                <h1 class="title">SMS Fraud</h1>
+                <!-- Add more content here to make it scrollable -->
+                <p class="description">
+                    SMS fraud, also known as "smishing" (a blend of SMS and phishing), involves the use of deceptive text messages to trick individuals into providing sensitive information, making payments, or performing actions that benefit the fraudsters. This type of fraud leverages the widespread use of mobile phones and the tendency of people to trust SMS communications. Understanding the tactics, warning signs, and preventive measures can help individuals safeguard against SMS fraud.
+                </p>
+
+                <h1 class="title">Common Tactics in SMS Fraud</h1>
+                <h2 class="title-2">1. Impersonation</h2>
+                <p class="description">One of the most common tactics in SMS fraud is impersonation, where fraudsters send messages that appear to be from legitimate entities such as banks, government agencies, or service providers. These messages may inform the recipient of a problem with their account, a missed payment, or a suspicious transaction, prompting them to act quickly.</p>
+                
+                <h2 class="title-2">2. Phishing Links</h2>
+                <p class="description">Fraudulent SMS messages often contain links to fake websites designed to look like legitimate sites. When recipients click on these links, they are directed to a page that asks for sensitive information such as usernames, passwords, credit card numbers, or personal identification numbers (PINs). These details are then captured by the fraudsters for malicious use.</p>
+                
+                <h2 class="title-2">3. Malware Distribution</h2>
+                <p class="description">Some SMS fraud schemes involve sending links that, when clicked, download malware onto the recipient's phone. This malware can steal personal information, track keystrokes, or give the fraudsters remote control over the device. Malware can also lead to unauthorized access to banking apps or other sensitive applications.</p>
+                
+                <h2 class="title-2">4. Premium Rate Numbers</h2>
+                <p class="description">Fraudsters may send messages prompting recipients to call a phone number that incurs high charges, known as premium rate numbers. These messages often create a sense of urgency, such as claiming that the recipient has won a prize or that there is an urgent issue with their account. When recipients call these numbers, they are billed exorbitant rates.</p>
+                
+                <h2 class="title-2">5. Financial Incentives and Threats</h2>
+                <p class="description">Some fraudulent SMS messages promise financial incentives, such as lottery winnings, tax refunds, or job opportunities. Others use threats, such as legal action or account suspension, to pressure recipients into providing information or making payments.</p>
+                
+                <div class="warning-signs">
+                    <h2 class="title-2">Warning Signs and Prevention</h2>
+                    <ul>
+                        <li class="description">Unexpected Messages: Be cautious of messages from unknown numbers or unsolicited communications from entities you do not have a relationship with.</li>
+                        <li class="description">Urgent Language: Fraudulent messages often create a sense of urgency or fear to prompt immediate action. Legitimate organizations typically do not pressure recipients in this manner.</li>
+                        <li class="description">Requests for Personal Information: Be skeptical of any message that asks for sensitive information such as passwords, PINs, or social security numbers. Legitimate companies rarely request such information via SMS.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Preventive Measures</h2>
+                    <p class="description">Taking proactive steps can significantly reduce the risk of becoming a victim of SMS fraud:</p>
+                    <ul>
+                        <li class="description">Use Spam Filters: Enable spam filtering on your phone to block messages from known spammers and suspicious numbers.</li>
+                        <li class="description">Verify Authenticity: If you receive a message claiming to be from a bank or service provider, contact the organization directly using a trusted phone number or website to verify the message's legitimacy.</li>
+                        <li class="description">Do Not Share Personal Information: Never provide personal or financial information in response to an unsolicited SMS. Legitimate organizations will have secure channels for such communications.</li>
+                        <li class="description">Install Security Software: Use reputable security software on your mobile device to protect against malware and other threats.</li>
+                        <li class="description">Report Fraudulent Messages: Report suspicious SMS messages to your mobile carrier and relevant authorities to help combat SMS fraud.</li>
+                    </ul>
+                </div>
+                
+                <div class="case-studies">
+                    <h2 class="title-2">Impact and Case Studies</h2>
+                    <p class="description">The impact of SMS fraud can be significant, leading to financial losses, identity theft, and unauthorized access to personal accounts. Victims may also experience emotional distress and a loss of trust in digital communications.</p>
+                    <p class="description">A notable case of SMS fraud involved the "HMRC scam" in the UK, where fraudsters sent messages pretending to be from Her Majesty's Revenue and Customs (HMRC). These messages claimed that the recipient was due a tax refund or owed money to HMRC, prompting them to click on a link or call a premium rate number. Many victims suffered financial losses and identity theft as a result.</p>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="email-details">
+                    <form method="POST" action="{{url_for('sms')}}">
+                        <label for="phone_number">Phone Number:</label>
+						<input type="tel" id="phone_number" name="phone_number" required>
+
+						<label for="message">Message:</label>
+						<textarea id="message" name="sms_message" rows="4" required></textarea>
+
+				
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script>
+</body>
+</html>

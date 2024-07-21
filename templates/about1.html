@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fraud Detection Company</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="video-background">
+		
+		<img id="bg-video" src="{{url_for('static',filename='assets/images/1.jpg')}}">
+			
+	</div>
+	<div class="content">		
+        <header>
+            <div class="logo">
+				
+				<a href="{{url_for('index')}}">GUARDIANS OF THE INTERNET</a>
+				<div class="menu-toggle" id="menu-toggle">&#9776;</div>
+			</div>
+            <nav>
+                <ul id="nav-links">
+                    <a href="/products" style="text-decoration:none;color:white;">Products</a>
+                    <a href="/about" style="text-decoration:none;color:white;">About Us</a>
+					<div class="auth-buttons">
+						<a href="{{url_for('signin')}}" class="sign-in">Sign In</a>
+						<a href="{{url_for('signup')}}" class="get-started">Sign Up</a>
+					</div>
+                </ul>
+            </nav>
+        </header>
+        <h2 class="tagline"><span style="color: white;">Guarding Your Integrity,<br></span> Uncovering the Truth.</h2>
+    </div>
+
+    <main>
+        <section class="about-us">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="{{url_for('static', filename='assets/images/2.jpg')}}" alt="About Us Image" class="about-image">
+                <div class="about-text">
+                    <p>At Fraud Detection Company, we are dedicated to safeguarding businesses and individuals from the ever-evolving threat of fraud. With a team of experts in data analysis, machine learning, and cybersecurity, we have developed state-of-the-art solutions that can detect and prevent fraudulent activities with remarkable accuracy. Our comprehensive approach combines real-time monitoring, advanced algorithms, and in-depth analytics to provide unparalleled protection and peace of mind.</p>
+                    <p>Our journey began with a simple mission: to create a secure environment where businesses can thrive without the fear of fraud. Over the years, we have grown into a leading provider of fraud detection and prevention services, trusted by clients worldwide. Our commitment to innovation and excellence drives us to continually enhance our technologies and methodologies, ensuring that we stay ahead of the curve in the fight against fraud.</p>
+                    <p>At the core of our success is our dedicated team. Each member brings a unique set of skills and experiences, contributing to a diverse and dynamic work environment. Together, we strive to make a significant impact by protecting assets, maintaining trust, and fostering a secure digital landscape for everyone.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-vision">
+            <div class="card">
+                <h2>Our Mission</h2>
+                <p>To protect businesses and individuals by detecting and preventing fraudulent activities through innovative and reliable solutions. Our mission is to provide top-notch security services that not only identify fraudulent patterns but also predict and prevent potential threats before they occur. By leveraging cutting-edge technology and extensive expertise, we aim to create a safer world where trust and integrity are paramount.</p>
+            </div>
+            <div class="card">
+                <h2>Our Vision</h2>
+                <p>To be the leading provider of fraud detection and prevention services, ensuring a secure and trustworthy environment for all. Our vision is to set the standard in the industry through continuous innovation, exceptional service, and a steadfast commitment to our clients. We envision a future where fraud is no longer a pervasive threat, and businesses can operate with confidence and security.</p>
+            </div>
+        </section>
+
+        <section class="team">
+            <h2>Meet Our Team</h2>
+            <p>Our team is a diverse group of professionals with a shared commitment to excellence and innovation. Each member brings unique skills and perspectives, contributing to our collective success and the safety of our clients.</p>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="{{url_for('static',filename='assets/images/3.jpg')}}" alt="Team Member 1">
+                    <h3>Vidhee Patel</h3>
+                    
+                </div>
+                <div class="team-member">
+                    <img src="{{url_for('static',filename='assets/images/5.png')}}" alt="Team Member 2">
+                    <h3>Deepak Mishra</h3>
+                   
+                </div>
+                <div class="team-member">
+                    <img class="left1" src="{{url_for('static',filename='assets/images/8.jpg')}}" alt="Team Member 3">
+                    <h3>Prathamesh Yandolli</h3>
+                </div>
+                <div class="team-member">
+                    <img src="{{url_for('static',filename='assets/images/7.png')}}" alt="Team Member 3">
+                    <h3>Shreya Watane</h3>
+                  
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gaurdians of The Internet. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        
+            const navLinkItems = document.querySelectorAll('header nav ul li a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            const dropdown = document.getElementById("dropdown");
+            const dropdownContent = document.querySelector(".dropdown-content");
+        
+            dropdown.addEventListener("mouseover", function() {
+                dropdown.classList.add("active");
+            });
+        
+            document.addEventListener("click", function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+        
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+            }); 
+        });
+    </script>
+</body>
+</html>

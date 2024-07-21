@@ -1,0 +1,11 @@
+url,length,has_ip,has_at,num_hyphens,num_dots,has_https,is_fraud
+example.com,11,0,0,1,1,1,0
+123.45.67.89/index,18,1,0,0,3,0,1
+legitstore.com,14,0,0,0,1,1,0
+scam-site.com,13,0,0,1,1,0,1
+trustedshop.org,16,0,0,0,1,1,0
+phishingpage.net,16,0,0,1,1,0,1
+secure-site.com,14,0,0,1,1,1,0
+fakesite.info,12,0,0,1,1,0,1
+realstore.co,12,0,0,0,1,1,0
+malicious-site.net,18,0,0,1,1,0,1

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Referral/Promo Transaction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Referral/Promo Transaction Result</h1>
+    <div class="result">
+        <h2>Result</h2>
+        <p>{{ result }}</p>
+    </div>
+    
+    <h2>All Transactions</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Referral Code</th>
+            <th>Promo Code</th>
+            <th>Number of Referrals</th>
+            <th>Total Spent</th>
+            <th>Result</th>
+            <th>Submission Time</th>
+        </tr>
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction.id }}</td>
+            <td>{{ transaction.referral_code }}</td>
+            <td>{{ transaction.promo_code }}</td>
+            <td>{{ transaction.num_referrals }}</td>
+            <td>{{ transaction.total_spent }}</td>
+            <td>{{ transaction.result }}</td>
+            <td>{{ transaction.submission_time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <a href="/">Home</a>
+</body>
+</html>
