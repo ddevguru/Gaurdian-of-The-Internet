@@ -1,10 +1,11 @@
 # Gaurdian-of-The-Internet
 
-# Fraud Detection System
+Fraud Detection System
 # Overview
-#This project is a comprehensive fraud detection system that identifies fraudulent activities across various domains including ad fraud, referral and promo abuse, fake emails, SMS scams, and more. The system leverages machine learning models to analyze data and detect potential fraud.
+This project is a comprehensive fraud detection system that identifies fraudulent activities across various domains including ad fraud, referral and promo abuse, fake emails, SMS scams, and more. The system leverages machine learning models to analyze data and detect potential fraud.
 
-#Features
+# Features
+
 Ad Fraud Detection: Identifies fraudulent ad transactions.
 Referral and Promo Abuse Detection: Detects misuse of referral codes and promotional offers.
 Fake Email Detection: Flags potentially fraudulent email addresses.
