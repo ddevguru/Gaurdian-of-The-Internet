@@ -45,17 +45,29 @@ This project is a comprehensive fraud detection system that identifies fraudulen
 The dataset used for training the models was collected from [YouData.ai](https://youdata.ai) It includes various features relevant to detecting fraud in different domains.
 Following are some links of dataset:
 
-[https://www.youdata.ai/m/datasets/662ddfb3ec1654669685710d](https://www.youdata.ai/m/datasets/662ddfb3ec1654669685710d)
+[https://datalink.youdata.ai/au4tu7kd](https://datalink.youdata.ai/au4tu7kd)
 
-[https://www.youdata.ai/m/datasets/64ddbbfbf4420f00091fb575](https://www.youdata.ai/m/datasets/64ddbbfbf4420f00091fb575)
+[https://datalink.youdata.ai/mwspf3yw](https://datalink.youdata.ai/mwspf3yw)
 
-[https://www.youdata.ai/m/datasets/661d142b4c40e249a48066ee](https://www.youdata.ai/m/datasets/661d142b4c40e249a48066ee)
+[https://datalink.youdata.ai/4xnyv7sb](https://datalink.youdata.ai/4xnyv7sb)
 
-[https://www.youdata.ai/m/datasets/662de3d4ec16546696857c2b](https://www.youdata.ai/m/datasets/662de3d4ec16546696857c2b)
+[https://datalink.youdata.ai/2p9xrm4x](https://datalink.youdata.ai/2p9xrm4x)
 
-[https://www.youdata.ai/m/datasets/662de2ee2edd02c265857a38](https://www.youdata.ai/m/datasets/662de2ee2edd02c265857a38)
+[https://datalink.youdata.ai/ycy5afzb](https://datalink.youdata.ai/ycy5afzb)
 
-[https://www.youdata.ai/m/datasets/661d15d9279aa8ef92326b3c](https://www.youdata.ai/m/datasets/661d15d9279aa8ef92326b3c)
+[https://datalink.youdata.ai/yck8v8r5](https://datalink.youdata.ai/yck8v8r5)
+
+[https://datalink.youdata.ai/2p8wv2am](https://datalink.youdata.ai/2p8wv2am)
+
+[https://datalink.youdata.ai/2etaszvs](https://datalink.youdata.ai/2etaszvs)
+
+[https://datalink.youdata.ai/ytnwkx2d](https://datalink.youdata.ai/ytnwkx2d)
+
+[https://datalink.youdata.ai/2p8dev4p](https://datalink.youdata.ai/2p8dev4p)
+
+[https://datalink.youdata.ai/yc86vpza](https://datalink.youdata.ai/yc86vpza)
+
+[https://datalink.youdata.ai/ycybyfbz](https://datalink.youdata.ai/ycybyfbz)
 
 ## Setup
 
